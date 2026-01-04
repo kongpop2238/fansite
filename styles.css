@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* ตกแต่งรูปวงกลม */
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* รูปวงกลม */
+    object-fit: cover;
+    border: 7px solid #ffec17; /* สีทอง */
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.4); /* เงาเรืองแสงสีทอง */
+}
+
+/* Challenge: ทำให้รูปกับ Text ห่างกัน */
+.profile-info {
+    padding-left: 60px; /* เพิ่มระยะห่าง */
+    vertical-align: middle;
+}
+
+.profile-table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.color-gold {
+    color: #ffc107 !important;
+}
+
+/* จัดสไตล์ตาราง Skill */
+.skill-table {
+    max-width: 800px; /* จำกัดความกว้างของตารางสกิล */
+    margin-top: 30px;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    overflow: hidden; /* เพื่อให้ border-radius แสดงผลดีกับ border */
+}
+
+.skill-table td {
+    padding: 18px 25px;
+    border: none; /* ลบเส้นแบ่งช่องตารางออก */
+    vertical-align: middle;
+    background-color: #222; /* พื้นหลังเข้มขึ้น */
+}
+
+.skill-table tr:nth-child(even) td {
+    background-color: #333; /* สลับสีพื้นหลังแถว */
+}
+
+.skill-table td:first-child {
+    font-weight: bold;
+    color: #ffc107;
+    width: 40%; /* กำหนดความกว้างให้คอลัมน์แรก */
+}
+
+/* จัดการรูปภาพในหน้า Gallery ให้เท่ากันทุกรูป */
+.gallery-item img {
+    width: 100%;            /* ให้ความกว้างเต็มกรอบ col-md-4 */
+    height: 250px;          /* กำหนดความสูงคงที่ (ปรับตัวเลขได้ตามชอบ) */
+    object-fit: cover;      /* สำคัญมาก: เพื่อให้รูปขยายเต็มช่องโดยไม่เสียสัดส่วน (ไม่เบี้ยว) */
+    object-position: center; /* ให้จุดกึ่งกลางของรูปอยู่ตรงกลางเสมอ */
+    border: 3px solid #ffc107;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้ที่รูป */
+.gallery-item img:hover {
+    border-color: #fff;
+    transform: scale(1.02); /* ขยายรูปขึ้นเล็กน้อยตอน Hover */
+}
+
+/* ตกแต่งกรอบ Gallery เพิ่มเติม */
+.gallery-item {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 12px;
+    height: 100%;           /* ให้กรอบแต่ละอันสูงเท่ากันด้วย */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+}
+
+.gallery-item img {
+    border: 3px solid #ffc107;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-left: 20px;
+}
